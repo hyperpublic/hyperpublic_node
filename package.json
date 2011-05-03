@@ -1,0 +1,30 @@
+{
+  "name": "hyperpublic-node",
+  "description": "Wrapper module for Hyperpublic API",
+  "version": "0.0.1",
+  "author": "Jonathan Vingiano <jonathan@hyperpublic.com>",
+  "contributors": [],
+  "keywords": [
+    "hyperpublic",
+    "api",
+    "wrapper",
+    "library"
+  ],
+  "main": "./lib/hyperpublic.js",
+  "engines": {
+    "node": ">= 0.4.5"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": {
+    ""
+  },
+  "homepage": {
+    "http://developers.hyperpublic.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hyperpublic/hyperpublic_node"
+  }
+}
