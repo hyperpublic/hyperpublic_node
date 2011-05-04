@@ -10,8 +10,8 @@ var callback = function (msg) {
   };
 }
 
-var client_id = '3RiGGtdIlJbVZhlqUvdGg47mwSegIYYHkfsWi0IT';
-var client_secret = 'IGqb1qcJfnkZJ839lR70PlI0rnP59SjG6BdOtmqI';
+var client_id = '';
+var client_secret = '';
 
 var api = new hyperpublic.API(client_id, client_secret);
 
