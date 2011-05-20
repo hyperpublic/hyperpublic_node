@@ -2,7 +2,7 @@
   "author": "Jonathan Vingiano <jonathan@hyperpublic.com> (@jgv)",
   "name": "hyperpublic",
   "description": "Node.js wrapper for the Hyperpublic API.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "keywords": ["hyperpublic", "location"],
   "homepage": "http://developer.hyperpublic.com",
   "repository": {
