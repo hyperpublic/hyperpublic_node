@@ -10,15 +10,29 @@ var callback = function (msg) {
   };
 }
 
-var client_id = '3RiGGtdIlJbVZhlqUvdGg47mwSegIYYHkfsWi0IT';
-var client_secret = 'IGqb1qcJfnkZJ839lR70PlI0rnP59SjG6BdOtmqI';
+var client_id = '';
+var client_secret = '';
 
 var api = new hyperpublic.API(client_id, client_secret);
 
+api.people.create({
+    "email":"jonathan@hyperpublic.com",
+    "name":"Jonathan",
+    "password": "my_password",
+    "tags": "test"
+}, callback('/people/{query}'));
 
-// show takes only one id. find. takes an object
+api.things.create({
+    "display_name": "macbook",
+    "tags": "sup",
+    "image_url": "http://developers.hyperpublic.com/images/logo.png",
+}, callback('/things/{create}'));
 
-console.log(api.people);
+api.people.create({
+    "display_name": "mcdonalods",
+    "tags": "fries",
+    "image_url": "http://developers.hyperpublic.com/images/logo.png",
+}, callback('/people/{create}'));
 
 api.people.show(4, callback('/people/{id}'));
 
