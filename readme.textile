@@ -2,7 +2,7 @@ h1. Hyperpublic Node.js Library
 
 h2. Usage
 
-p. This library allows developers to easily interact with the Hyperpublic API with Node.js. It is intended to be simple and somewhat flexible. Each method requires two parameters: your query and a callback function. API keys are always required and can be created/retrieved at our "developer site":http://developers.hyperpublic.com.
+p. This library allows developers to easily interact with the Hyperpublic API with Node.js. It is intended to be simple and somewhat flexible. Each method requires two parameters: your query and a callback function. API keys are always required and can be created/retrieved at our "here":http://hyperpublic.com/oauth_clients.
 
 h2. Examples
 
