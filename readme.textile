@@ -1,0 +1,51 @@
+h1. Hyperpublic Node.js Library
+
+h2. Usage
+
+p. This library allows developers to easily interact with the Hyperpublic API with Node.js. It is intended to be simple and somewhat flexible. Each method requires two parameters: your query and a callback function. API keys are always required and can be created/retrieved at our "developer site":http://developers.hyperpublic.com.
+
+h2. Examples
+
+p. First, we must always include our API keys. 
+
+<pre>
+var clientId = 'YOUR_CLIENT_ID';
+var clientSecret = 'YOUR_CLIENT_SECRET_KEY';
+</pre>
+
+p. Then, we must create the Hyperpublic object that you will query against.
+
+<pre>
+var api = new hyperpublic.API(client_id, client_secret);
+</pre>
+
+p. Lastly, we will ask Hyperpublic for something. How about all the people tagged as 'entrepreneurs' in NYC? We'll use the neighborhood of the Hyperpublic office as the center of our search. I'm looking for a non-technical co-founder for my new pet food startup, so that's a perfect query. We also want to filter out all users who haven't provided a name or location.
+
+<pre>
+api.people.find({
+    "tags" : "Entrepreneur",
+    "neighborhood" : "chelsea,ny",
+    "radius" : "20"
+}, function (e) { 
+    for (e = 0, len = hay.length; e < len; i++) {
+        if (e[i].display_name && e[i].locations[0] !== undefined) {
+            console.log(e[i].display_name + ' - ' + e[i].locations[0].name );
+        }
+    }
+});
+</pre>
+
+p. Creating People, Places, or Things is just as easy as requesting them. 
+
+<pre>
+api.people.create({
+    "email" : "jonathan@hyperpublic.com",
+    "name" : "Jonathan",
+    "password" : "thepasswordispassword",
+    "tags" : ["javascript", "node.js", "nyc", "internets"]
+}, function (newPerson) {
+    console.log(newPerosn);
+});
+</pre>
+
+p. For more information and detailed documentation on the Hyperpublic API, check out our "developer resources":http://developers.hyperpublic.com.
