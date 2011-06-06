@@ -2,8 +2,8 @@ var hyperpublic = require('../lib/hyperpublic'),
 vows = require('vows'),
 assert = require('assert');
 
-var client_id = '3RiGGtdIlJbVZhlqUvdGg47mwSegIYYHkfsWi0IT',
-    client_secret = 'IGqb1qcJfnkZJ839lR70PlI0rnP59SjG6BdOtmqI',
+var client_id = '', // add your client_id
+    client_secret = '', // add your client_secret
     api = new hyperpublic.API(client_id, client_secret);
 
 
