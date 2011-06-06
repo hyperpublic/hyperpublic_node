@@ -75,7 +75,7 @@ vows.describe('Test Hyperpublic API Wrapper').addBatch({
                 assert.isUndefined(topic.error);
                 assert.isObject(topic);
             }
-        },
+        }, 
         'when querying for a thing by id': {
             topic: function () {
                 api.things.show(722, this.callback);                
