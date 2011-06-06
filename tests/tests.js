@@ -1,6 +1,6 @@
 var hyperpublic = require('../lib/hyperpublic'),
-vows = require('vows'),
-assert = require('assert');
+    vows = require('vows'),
+    assert = require('assert');
 
 var client_id = '', // add your client_id
     client_secret = '', // add your client_secret
