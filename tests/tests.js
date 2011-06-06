@@ -33,8 +33,8 @@ vows.describe('Test Hyperpublic API Wrapper').addBatch({
         'when creating a person': {
             topic: function () {
                 api.people.create({
-                    'email':'jonathanvingiano' + Math.floor(Math.random * 1000)+ '@hyperpublic.com',
-                    'name':'Jonathan V',
+                    'email':'jonathanvingiano' + Math.floor(Math.random() * 1000) + '@hyperpublic.com',
+                    'display_name':'Jonathan V',
                     'password': 'my_password',
                     'tags': 'test'
                 }, this.callback);
