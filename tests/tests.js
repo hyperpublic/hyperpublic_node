@@ -1,11 +1,15 @@
 var hyperpublic = require('../lib/hyperpublic'),
     vows = require('vows'),
-    assert = require('assert');
+    assert = require('assert'),
+    sys = require('sys');
 
-var client_id = '', // add your client_id
-    client_secret = '', // add your client_secret
-    api = new hyperpublic.API(client_id, client_secret);
 
+var client_id = 'Y8ccbceyZZbcmNoZ8RsXLHDhxSs0qnL40SmmjRBU',
+    client_secret = '5YugC5yJYeFgjcfYf0VrzYnsiVJu00TYJBOTd4r2';
+
+var api = new hyperpublic.API(client_id, client_secret);
+
+api.host = 'localhost:3000';
 
 vows.describe('Test Hyperpublic API Wrapper').addBatch({
     'While you use the Hyperpublic API': {
@@ -22,11 +26,11 @@ vows.describe('Test Hyperpublic API Wrapper').addBatch({
             topic: function () {
                 api.people.find({
                     'zipcode' : '11211',
-                    'limit' : '1'
+                    'limit' : '2'
                 }, this.callback);
             },
             'an array will be returned': function (topic, err) {
-                assert.isUndefined(topic.error);
+                assert.isUndefined(topic.error, err);
                 assert.isArray(topic);
             }
         },
@@ -89,7 +93,7 @@ vows.describe('Test Hyperpublic API Wrapper').addBatch({
             topic: function () {
                 api.things.find({
                     'zipcode': '11211',
-                    'limit': '1'
+                    'limit': '2'
                 }, this.callback);
             },
             'an array will be returned': function (topic, err) {
