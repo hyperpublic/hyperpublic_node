@@ -2,7 +2,7 @@ h1. Hyperpublic Node.js Library
 
 h2. Usage
 
-p. This library allows developers to easily interact with the Hyperpublic API with Node.js. It is intended to be simple and somewhat flexible. Each method requires two parameters: your query and a callback function. API keys are always required and can be created/retrieved at our "here":http://hyperpublic.com/oauth_clients.
+p. This library allows developers to easily interact with the Hyperpublic API with Node.js. It is intended to be simple and somewhat flexible. Each method requires two parameters: your query and a callback function. API keys are always required and can be created/retrieved at "here":http://hyperpublic.com/oauth_clients.
 
 h2. Installation
 
@@ -32,10 +32,10 @@ api.people.find({
     "tags" : "Entrepreneur",
     "neighborhood" : "chelsea,ny",
     "radius" : "20"
-}, function (e) { 
-    for (e = 0, len = hay.length; e < len; i++) {
-        if (e[i].display_name && e[i].locations[0] !== undefined) {
-            console.log(e[i].display_name + ' - ' + e[i].locations[0].name );
+}, function (entrepreneurs) { 
+    for (i = 0, len = entrepreneurs.length; entrepreneurs < len; i++) {
+        if (entrepreneurs[i].display_name && entrepreneurs[i].locations[0] !== undefined) {
+            console.log(entrepreneurs[i].display_name + ' - ' + entrepreneurs[i].locations[0].name );
         }
     }
 });
@@ -49,8 +49,8 @@ api.people.create({
     "name" : "Jonathan",
     "password" : "thepasswordispassword",
     "tags" : ["javascript", "node.js", "nyc", "internets"]
-}, function (newPerson) {
-    console.log(newPerosn);
+}, function (me) {
+    console.log(me);
 });
 </pre>
 
