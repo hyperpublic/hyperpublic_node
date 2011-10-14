@@ -25,32 +25,19 @@ p. Then, we must create the Hyperpublic object that you will query against.
 var api = new hyperpublic.API(client_id, client_secret);
 </pre>
 
-p. Lastly, we will ask Hyperpublic for something. How about all the people tagged as 'entrepreneurs' in NYC? We'll use the neighborhood of the Hyperpublic office as the center of our search. I'm looking for a non-technical co-founder for my new pet food startup, so that's a perfect query. We also want to filter out all users who haven't provided a name or location.
+p. Lastly, we will ask Hyperpublic for something. How about all the pizza places near the Hyperpublic Office?
 
 <pre>
-api.people.find({
-    "tags" : "Entrepreneur",
-    "neighborhood" : "chelsea,ny",
-    "radius" : "20"
-}, function (entrepreneurs) { 
-    for (i = 0, len = entrepreneurs.length; entrepreneurs < len; i++) {
-        if (entrepreneurs[i].display_name && entrepreneurs[i].locations[0] !== undefined) {
-            console.log(entrepreneurs[i].display_name + ' - ' + entrepreneurs[i].locations[0].name );
+api.places.find({
+    "q" : "pizza",
+    "location" : "416 W 13th St, New York, NY 10014",
+    "radius" : "5"
+}, function (pizza_places) { 
+    for (i = 0, len = pizza_places.length; i < len; i++) {
+        if (pizza_places[i].display_name && pizza_places[i].locations[0] !== undefined) {
+            console.log(pizza_places[i].display_name + ' - ' + pizza_places[i].locations[0].name );
         }
     }
-});
-</pre>
-
-p. Creating People, Places, or Things is just as easy as requesting them. 
-
-<pre>
-api.people.create({
-    "email" : "jonathan@hyperpublic.com",
-    "name" : "Jonathan",
-    "password" : "thepasswordispassword",
-    "tags" : ["javascript", "node.js", "nyc", "internets"]
-}, function (me) {
-    console.log(me);
 });
 </pre>
 
