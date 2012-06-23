@@ -1,7 +1,7 @@
 var hyperpublic = require('../lib/hyperpublic'),
     vows = require('vows'),
     assert = require('assert'),
-    sys = require('sys');
+    util = require('util');
 
 
 var client_id = 'Y8ccbceyZZbcmNoZ8RsXLHDhxSs0qnL40SmmjRBU',
