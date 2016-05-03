@@ -1,11 +1,11 @@
-var sys = require('sys'),
+var util = require('util'),
     hyperpublic = require('./lib/hyperpublic');
 
 var callback = function (msg) {
   return function (data, code) {
     console.log(msg);
     console.log('------------------------');
-    console.log(sys.inspect(data));
+    console.log(util.inspect(data));
     console.log('------------------------\n');
   };
 }
